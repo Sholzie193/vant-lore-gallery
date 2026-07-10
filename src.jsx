@@ -3,6 +3,9 @@ import{createRoot}from'react-dom/client';
 import{AnimatePresence,motion}from'framer-motion';
 import{ArrowDownRight,ArrowUpRight,Menu,X,MoveRight,Search}from'lucide-react';
 import'./style.css';
+import hero01 from'./assets/gallery-hero.png';
+import hero02 from'./assets/gallery-hero-02.png';
+import hero03 from'./assets/gallery-hero-03.png';
 
 const works=[
  {id:'01',title:'A Quiet Measure',artist:'Mara Veldt',year:'2026',medium:'Oil, ash and wax on linen',size:'180 × 240 cm',tone:'rust',status:'Available'},
@@ -17,9 +20,9 @@ const Reveal=({children,className='',delay=0})=><motion.div className={className
 function Art({tone,className=''}){return <div className={`art ${tone} ${className}`}><i/><b/><em/></div>}
 function Footer(){return <><section className="newsletter"><div><small>THE GALLERY LETTER</small><h2>Exhibitions, studio visits,<br/>and new work—occasionally.</h2></div><form onSubmit={e=>e.preventDefault()}><label htmlFor="email">Email address</label><input id="email" type="email" placeholder="you@example.com" required/><button>Subscribe <ArrowUpRight/></button></form></section><footer><div className="footmark">VANT—LORE</div><div><small>GALLERY</small><p>Kattendijkdok 14<br/>2000 Antwerp, Belgium</p><p>Thu—Sat, 11:00—18:00</p></div><div><small>ENQUIRIES</small><p>studio@vantlore.gallery<br/>+32 3 555 01 48</p><p>Press · Shipping · Advisory</p></div><div><small>FOLLOW</small><p>Instagram<br/>Artsy</p><p>Privacy · Terms</p></div><button onClick={()=>scrollTo({top:0,behavior:'smooth'})}>Back to top ↑</button></footer></>}
 const heroSlides=[
- {src:'/assets/gallery-hero.png',alt:'A monumental rust and blue abstract painting installed in the Antwerp gallery',exhibition:'MARA VELDT — OPEN GROUND',detail:'GALLERY I · UNTIL 27 SEPTEMBER'},
- {src:'/assets/gallery-hero-02.png',alt:'Two abstract paintings in the gallery enfilade',exhibition:'JONAS RHEE — AFTER WEATHER',detail:'ONLINE PREVIEW · AUTUMN 2026'},
- {src:'/assets/gallery-hero-03.png',alt:'A tall abstract painting in warm afternoon light',exhibition:'PRIVATE VIEWING ROOMS',detail:'BY APPOINTMENT · ANTWERP'},
+ {src:hero01,alt:'A monumental rust and blue abstract painting installed in the Antwerp gallery',exhibition:'MARA VELDT — OPEN GROUND',detail:'GALLERY I · UNTIL 27 SEPTEMBER'},
+ {src:hero02,alt:'Two abstract paintings in the gallery enfilade',exhibition:'JONAS RHEE — AFTER WEATHER',detail:'ONLINE PREVIEW · AUTUMN 2026'},
+ {src:hero03,alt:'A tall abstract painting in warm afternoon light',exhibition:'PRIVATE VIEWING ROOMS',detail:'BY APPOINTMENT · ANTWERP'},
 ];
 function Hero(){const[active,setActive]=useState(0);useEffect(()=>{const timer=setInterval(()=>setActive(i=>(i+1)%heroSlides.length),6500);return()=>clearInterval(timer)},[]);const slide=heroSlides[active];return <section className="hero"><div className="heroMedia"><AnimatePresence initial={false}><motion.img key={slide.src} src={slide.src} alt={slide.alt} initial={{opacity:0,scale:1}} animate={{opacity:1,scale:1.025}} exit={{opacity:0}} transition={{opacity:{duration:1.15},scale:{duration:7,ease:'linear'}}}/></AnimatePresence></div><div className="shade"/><motion.div className="heroCopy" initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} transition={{duration:1,delay:.25}}><small>ANTWERP · EST. 2013</small><h1>Art that<br/><i>outlives</i> the room.</h1><p>Vant—Lore represents a focused roster of contemporary painters whose work rewards a longer look.</p><button onClick={()=>go('collection')}>Explore the collection <ArrowDownRight/></button></motion.div><AnimatePresence mode="wait"><motion.div key={active} className="heroSide" initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-8}}>{String(active+1).padStart(2,'0')} / {String(heroSlides.length).padStart(2,'0')}<br/><b>{slide.exhibition}</b><span>{slide.detail}</span></motion.div></AnimatePresence><div className="heroControls" aria-label="Hero slideshow">{heroSlides.map((s,i)=><button key={s.src} className={i===active?'active':''} onClick={()=>setActive(i)} aria-label={`Show slide ${i+1}`}><span/></button>)}</div><div className="scroll">SCROLL TO DISCOVER</div></section>}
 function Home(){return <>
