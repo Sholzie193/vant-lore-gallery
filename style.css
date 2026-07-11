@@ -17,3 +17,13 @@ button:focus-visible{outline:2px solid #c15e37;outline-offset:5px}
 /* At the bottom only, match the browser canvas to the footer. The class is
    removed as soon as the user scrolls upward, preserving the ivory top bounce. */
 html.at-page-end,html.at-page-end body{background-color:var(--rust)}
+.exhibit-silt{background:#9b8c79}.exhibit-silt i{inset:5% 38% 4% 8%;background:#4d3329;transform:skewY(-7deg)}.exhibit-silt b{inset:18% 8% 44% 52%;background:#d1c3aa}.exhibit-silt em{inset:63% 12% 7% 28%;background:#7f452f;clip-path:polygon(0 22%,100% 0,86% 100%,12% 82%)}
+.view-grid{background:#c9c3b5}.view-grid i{inset:8% 42% 12% 7%;background:#384b4f}.view-grid b{inset:22% 8% 8% 48%;border:14px solid #8e7255}.view-grid em{inset:52% 6% 38% 4%;background:#b35c36;transform:rotate(-4deg)}
+.view-mark{background:#e2dccd}.view-mark i{inset:11% 12% 61% 18%;background:#202321;border-radius:50%}.view-mark b{inset:39% 55% 9% 9%;background:#a79b80;transform:rotate(8deg)}.view-mark em{inset:46% 8% 18% 52%;background:#6c7b78;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.journal-wash{background:#b9c0bc}.journal-wash i{inset:0 55% 0 12%;background:#304b58;transform:skewX(-8deg)}.journal-wash b{inset:12% 7% 54% 39%;background:#d6cfc0}.journal-wash em{inset:62% 18% 5% 34%;background:#82624d}
+.journal-line{background:#d9d0bb}.journal-line i{inset:7% 8% 8% 8%;border:2px solid #5e5b51;transform:rotate(5deg)}.journal-line b{inset:23% 56% 15% 16%;background:#ede9dc}.journal-line em{inset:11% 17% 58% 47%;background:#a59675;border-radius:50%}
+.journal-night{background:#252522}.journal-night i{inset:10% 50% 12% 8%;background:#43534f;border-radius:50% 50% 8% 8%}.journal-night b{inset:18% 8% 8% 58%;background:#7b4e39}.journal-night em{inset:61% 26% 7% 25%;background:#151a1b;border:1px solid #b49a69;transform:rotate(-6deg)}
+.ex-current{background:#a89782}.ex-current i{inset:8% 58% 8% 9%;background:#723d2d}.ex-current b{inset:18% 8% 42% 35%;background:#d0c5ae}.ex-current em{inset:64% 16% 8% 43%;background:#364448}
+.ex-upcoming{background:#ddd7c8}.ex-upcoming i{inset:9% 9% 54% 38%;background:#93896f;border-radius:50%}.ex-upcoming b{inset:48% 51% 8% 8%;background:#f0ece2}.ex-upcoming em{inset:58% 9% 8% 56%;background:#b99067}
+.ex-archive{background:#9aa5a2}.ex-archive i{inset:0 66% 0 12%;background:#2f4a55}.ex-archive b{inset:16% 8% 14% 42%;background:#c6c0b2;transform:skewY(8deg)}.ex-archive em{inset:62% 14% 8% 31%;background:#536c71}
+.visit-map{background:#c8c2b4}.visit-map i{inset:7% 46% 8% 8%;background:#6c7b76;clip-path:polygon(0 0,100% 12%,76% 100%,9% 78%)}.visit-map b{inset:16% 8% 44% 44%;background:#dcd5c5;transform:rotate(-5deg)}.visit-map em{inset:61% 12% 8% 38%;background:#8c533d;clip-path:polygon(12% 0,100% 18%,82% 100%,0 78%)}
