@@ -14,6 +14,6 @@ button:focus-visible{outline:2px solid #c15e37;outline-offset:5px}
 .art.hasImage{background:#d2cec4;display:flex;align-items:center;justify-content:center}.art.hasImage:after{opacity:.08;mix-blend-mode:multiply}.art.hasImage img{width:100%;height:100%;object-fit:contain;display:block}.num{display:flex;justify-content:space-between;align-items:center}.num span{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#706b61}.collectionItem .art.hasImage{padding:4.5%;background:#d7d3c9}.modalImage .art.hasImage{padding:3%;background:#cbc6ba}
 .railWrap{position:relative}.railArrow{display:none}
 @media(max-width:800px){.railArrow{position:absolute;z-index:4;top:50%;display:flex;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.48);border-radius:50%;background:rgba(20,20,18,.74);color:#fff;backdrop-filter:blur(8px);box-shadow:0 6px 24px rgba(20,20,18,.18);transform:translateY(-50%);transition:transform .2s ease,background-color .2s ease}.railArrow:active{transform:translateY(-50%) scale(.94)}.railPrev{left:3vw}.railNext{right:3vw}.workRail{scroll-padding-inline:6vw}}
-/* Paint beyond the document edge without changing scroll height. This preserves
-   native elastic overscroll while preventing the page canvas from flashing. */
-footer{box-shadow:0 100vh 0 100vh var(--rust)}
+/* At the bottom only, match the browser canvas to the footer. The class is
+   removed as soon as the user scrolls upward, preserving the ivory top bounce. */
+html.at-page-end,html.at-page-end body{background-color:var(--rust)}
