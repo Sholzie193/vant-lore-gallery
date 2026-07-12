@@ -31,7 +31,7 @@ const works=[
  {id:'12',title:'Blue Hour Ridge',artist:'Elias Voss',year:'2024',medium:'Oil, marble dust and graphite on linen',size:'120 × 210 cm',tone:'landscape',image:winterFieldWork,status:'Private collection',genre:'Landscape'},
  {id:'13',title:'Counterweight',artist:'Tess Nwosu',year:'2026',medium:'Acrylic, dyed linen and hand stitching',size:'190 × 128 cm',tone:'textile',image:geometricTextileWork,status:'Available',genre:'Mixed media'},
 ];
-const homepageWorkOrder=['08','02','11','05','13','03','09','06','10','01','12','07','04'];
+const homepageWorkOrder=['08','11','13','02','09','05','10','03','12','06','01','07','04'];
 const homepageWorks=homepageWorkOrder.map(id=>works.find(work=>work.id===id)).filter(Boolean);
 const nav=[['Collection','collection'],['Artists','artists'],['Exhibitions','exhibitions'],['Journal','journal'],['Visit','visit']];
 function go(p){location.hash=p==='home'?'':p;scrollTo({top:0,behavior:'smooth'})}
